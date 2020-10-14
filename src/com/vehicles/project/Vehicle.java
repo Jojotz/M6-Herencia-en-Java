@@ -8,7 +8,7 @@ public abstract class Vehicle {
 	protected String plate;									
 	protected String brand;
 	protected String color;
-	protected List<Wheel> wheels = new ArrayList<Wheel>(); //Cada rueda tiene un diametro y marca distintos? 2 en 2?
+	protected List<Wheel> wheels = new ArrayList<Wheel>();
 
 	public Vehicle(String plate, String brand, String color, ArrayList<Wheel> wheels) throws Exception {
 		
@@ -38,11 +38,6 @@ public abstract class Vehicle {
 		this.brand = brand;
 		this.color = color;
 	}	
-	
-	/*public static String getPlateNumber () {
-		
-		return plate;
-	}*/
 	
 	public abstract void addWheels();	
 	

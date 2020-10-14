@@ -5,8 +5,6 @@ import java.util.List;
 
 public class Car extends Vehicle {
 	
-	private static int wheelsTot = 4;  //coche = matricula, marca, color, + 4 ruedas?
-
 	public Car(String plate, String brand, String color, ArrayList<Wheel> wheels) throws Exception {
 		super(plate, brand, color, wheels);
 	}
@@ -29,16 +27,20 @@ public class Car extends Vehicle {
 		Wheel rightWheel = wheels.get(0);
 		Wheel leftWheel = wheels.get(1);
 
-		/*if (!(rightWheel.equals(leftWheel)))
-			throw new Exception();*/
-
-		this.wheels.add(leftWheel); // List de 4 ruedas ?  con su marca y diametro?
+		this.wheels.add(leftWheel);
 		this.wheels.add(rightWheel);
 	}
+	
+	public String toString() { 
+        
+        String bwheelstoString = "Posteriors; marca: " + wheels.get(2).getBrand() + ", i diámetre de: " + wheels.get(2).getDiameter() + " dm.\n";
+        String fwheelstoString = "Davanteres; marca: " + wheels.get(0).getBrand() + ", i diámetre de: " + wheels.get(0).getDiameter() + " dm.\n";
+       
+        return bwheelstoString + fwheelstoString; 
+    } 
 
 	@Override
 	public void addWheels() {
 			
 	}
-
 }
